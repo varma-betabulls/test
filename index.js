@@ -19,6 +19,7 @@ var api = new ParseServer({
   appId: process.env.APP_ID || 'MLcbPuzJbmv1ZQcMjj9n',
   
   masterKey: process.env.MASTER_KEY || 'JzFFPgdDeW7lo5x9LXbN', //Add your master key here. Keep it secret!
+   fileKey:process.env.FILE_KEY || 'RJDWhqKfMw0waWJji2Fk', 
   serverURL: process.env.SERVER_URL || 'https://egsd-app.herokuapp.com/parse',  // Don't forget to change to https if needed http://localhost:1337/parse
   liveQuery: {
     classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
