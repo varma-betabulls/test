@@ -13,7 +13,7 @@ if (!databaseUri) {
 
 var api = new ParseServer({
 //  databaseURI: databaseUri || 'mongodb://localhost:27017/dev',
-  databaseURI: databaseUri || 'mongodb://admin:admin123@ds137957.mlab.com:37957/edsd',
+  databaseURI: databaseUri || 'mongodb://admin:admin123@ds135747.mlab.com:35747/heroku_5qh6vx0c',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
 //  appId: process.env.APP_ID || 'myAppId',
   appId: process.env.APP_ID || 'MLcbPuzJbmv1ZQcMjj9n',
