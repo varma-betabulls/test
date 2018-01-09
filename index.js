@@ -4,17 +4,6 @@
 var express = require('express');
 var ParseServer = require('parse-server').ParseServer;
 var path = require('path');
-
-var GCSAdapter = require('parse-server-gcs-adapter');
-
-var gcsAdapter = new GCSAdapter('project', 
-                            'RJDWhqKfMw0waWJji2Fk', 
-                            'bucket' , {
-                                bucketPrefix: '',
-                                directAccess: false
-                            });
-
-
 var databaseUri = process.env.DATABASE_URI || process.env.MONGODB_URI;
 
 if (!databaseUri) {
@@ -27,8 +16,6 @@ var api = new ParseServer({
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
 //  appId: process.env.APP_ID || 'myAppId',
   appId: process.env.APP_ID || 'MLcbPuzJbmv1ZQcMjj9n',
-   filesAdapter: gcsAdapter,
-
   masterKey: process.env.MASTER_KEY || 'JzFFPgdDeW7lo5x9LXbN', //Add your master key here. Keep it secret!
    fileKey:process.env.FILE_KEY || 'RJDWhqKfMw0waWJji2Fk', 
   serverURL: process.env.SERVER_URL || 'https://egsd-app.herokuapp.com/parse',  // Don't forget to change to https if needed http://localhost:1337/parse
