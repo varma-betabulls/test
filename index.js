@@ -4,6 +4,7 @@
 var express = require('express');
 var ParseServer = require('parse-server').ParseServer;
 var path = require('path');
+//var S3Adapter=require('parse-server').S3Adapter;
 var databaseUri = process.env.DATABASE_URI || process.env.MONGODB_URI;
 
 if (!databaseUri) {
@@ -21,7 +22,12 @@ var api = new ParseServer({
   serverURL: process.env.SERVER_URL || 'https://egsd-app.herokuapp.com/parse',  // Don't forget to change to https if needed http://localhost:1337/parse
   liveQuery: {
     classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
-  }
+  }//,
+   //filesAdapter: new S3Adapter(
+ //   process.env.S3_ACCESS_KEY,
+ //   process.env.S3_SECRET_KEY,
+  //  process.env.S3_BUCKET,
+  //  {directAccess: true}
 });
 // Client-keys like the javascript key or the .NET key are not necessary with parse-server
 // If you wish you require them, you can set them as options in the initialization above:
