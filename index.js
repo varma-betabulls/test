@@ -13,10 +13,10 @@ if (!databaseUri) {
 
 var api = new ParseServer({
 //  databaseURI: databaseUri || 'mongodb://localhost:27017/dev',
-  databaseURI: databaseUri || 'mongodb://admin:admin123@ds135747.mlab.com:35747/heroku_5qh6vx0c',
+//  databaseURI: databaseUri || 'mongodb://admin:admin123@ds135747.mlab.com:35747/heroku_5qh6vx0c',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
 //  appId: process.env.APP_ID || 'myAppId',
-  appId: process.env.APP_ID || 'MLcbPuzJbmv1ZQcMjj9n',
+//  appId: process.env.APP_ID || 'MLcbPuzJbmv1ZQcMjj9n',
   masterKey: process.env.MASTER_KEY || 'JzFFPgdDeW7lo5x9LXbN', //Add your master key here. Keep it secret!
    fileKey:process.env.FILE_KEY || 'RJDWhqKfMw0waWJji2Fk', 
   serverURL: process.env.SERVER_URL || 'https://egsd-app.herokuapp.com/parse',  // Don't forget to change to https if needed http://localhost:1337/parse
